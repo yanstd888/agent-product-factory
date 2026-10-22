@@ -1,0 +1,12 @@
+# Enforce LF on checkout across all platforms
+* text=auto eol=lf
+
+# Explicit binary files
+*.xlsx binary
+*.epub binary
+*.pdf binary
+*.zip binary
+*.jar binary
+*.png binary
+*.jpg binary
+*.jpeg binary

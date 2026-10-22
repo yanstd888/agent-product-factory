@@ -20,7 +20,9 @@ def write_json(path: Path, data: dict[str, object]) -> None:
 def write_zip(archive: zipfile.ZipFile, name: str, content: str, compression: int = zipfile.ZIP_DEFLATED) -> None:
     entry = zipfile.ZipInfo(name, ZIP_EPOCH)
     entry.compress_type = compression
-    archive.writestr(entry, content)
+    entry.create_system = 0
+    entry.external_attr = 0
+    archive.writestr(entry, content.replace("\r\n", "\n"))
 
 
 def prompt_pack() -> None:
