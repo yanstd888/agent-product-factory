@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digital-product-factory"
+version = "0.1.0"
+description = "Offline QA Gate and Agent Skills for digital products"
+readme = "PRD Digital Product Factory (nama kerja).md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["product_qa*"]

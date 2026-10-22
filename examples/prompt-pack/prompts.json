@@ -1,0 +1,17 @@
+{
+  "prompts": [
+    {
+      "id": "launch-plan",
+      "template": "Create a three-step launch plan for {{audience}}.",
+      "variables": [
+        "audience"
+      ],
+      "example": {
+        "input": {
+          "audience": "indie creators"
+        },
+        "output": "1. Define offer. 2. Prepare landing page. 3. Announce launch."
+      }
+    }
+  ]
+}

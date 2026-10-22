@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Output reports
+reports/*.json
+!reports/.gitkeep
+
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,111 @@
+{
+  "prompts": [
+    {
+      "id": "deskripsi-katalog-tshirt",
+      "template": "Tuliskan deskripsi produk katalog untuk produk {{nama_produk}} dari brand {{nama_brand}}. Produk ini menggunakan bahan {{jenis_bahan}} dengan cutting {{tipe_cutting}}. Sorot kenyamanan pemakaian sehari-hari, detail jahitan rantai, dan panduan padu padan (styling) untuk gaya kasual.",
+      "variables": [
+        "nama_produk",
+        "nama_brand",
+        "jenis_bahan",
+        "tipe_cutting"
+      ],
+      "example": {
+        "input": {
+          "nama_produk": "Heavyweight Boxy T-Shirt",
+          "nama_brand": "Arka Apparel",
+          "jenis_bahan": "Cotton Combed 16s (230 gsm)",
+          "tipe_cutting": "Boxy Oversized Fit"
+        },
+        "output": "Hadirkan siluet tegas dan kenyamanan maksimal bersama Arka Heavyweight Boxy T-Shirt. Dibuat dari Cotton Combed 16s berbobot 230 gsm, kaos ini menjaga bentuknya tetap kokoh tanpa terasa kaku di iklim tropis. Dilengkapi jahitan kerah rib anti-molor dan jahitan rantai pundak berkualitas garment. Padukan bersama celana kargo atau denim lurus untuk siluet streetwear yang rapi."
+      }
+    },
+    {
+      "id": "hook-konten-tiktok-fashion",
+      "template": "Buat 5 variasi kalimat hook video TikTok berdurasi 3 detik pertama untuk mempromosikan {{nama_produk}} bertema {{tema_konten}}. Target audiens adalah {{target_audiens}} yang mengutamakan {{prioritas_audiens}}.",
+      "variables": [
+        "nama_produk",
+        "tema_konten",
+        "target_audiens",
+        "prioritas_audiens"
+      ],
+      "example": {
+        "input": {
+          "nama_produk": "Kemeja Flannel Tartan",
+          "nama_brand": "Nusa Studio",
+          "tema_konten": "Styling kampus vs nongkrong",
+          "target_audiens": "Mahasiswa dan pekerja muda",
+          "prioritas_audiens": "Kualitas kain tidak gatal dan potongan pas"
+        },
+        "output": "1. Jangan beli flannel sebelum tahu ciri kain yang tidak bikin gerah seharian.\n2. Satu kemeja, tiga gaya: rahasia outfit nongkrong langsung rapi.\n3. Alasan kami butuh 4 kali revisi pola demi potongan bahu yang tidak kaku ini.\n4. Ini upgrade terbaik untuk lemari pakaian kamu di bawah IDR 250.000.\n5. Stop pakai kemeja tipis yang mudah kusut sehabis dicuci sekali."
+      }
+    },
+    {
+      "id": "brief-lookbook-photoshoot",
+      "template": "Susun lembar brief pemotretan lookbook untuk koleksi {{nama_koleksi}} oleh {{nama_brand}}. Pemotretan bertempat di {{lokasi_shoot}} dengan suasana (mood) {{suasana_visual}}. Rinci konsep pencahayaan, arahan pose model, dan daftar outfit prioritas.",
+      "variables": [
+        "nama_koleksi",
+        "nama_brand",
+        "lokasi_shoot",
+        "suasana_visual"
+      ],
+      "example": {
+        "input": {
+          "nama_koleksi": "Urban Transit Collection",
+          "nama_brand": "Vektor Works",
+          "lokasi_shoot": "Stasiun kereta dan trotoar perkotaan sore hari",
+          "suasana_visual": "Cahaya sore keemasan (golden hour), candid dinamis, dan tone warna hangat"
+        },
+        "output": "Brief Pemotretan Koleksi Urban Transit:\n1. Konsep Utama: Aktivitas harian komuter urban yang dinamis dan fungsional.\n2. Pencahayaan: Dominan natural golden hour sore hari dengan sedikit fill flash direct untuk efek kontras modern.\n3. Pose Model: Gerakan berjalan natural, menyeberang jalan, dan bersandar santai di railing tangga stasiun.\n4. Prioritas Foto: Detail tekstur kain, kerapian jahitan saku celana kargo, dan logo woven pada lengan baju."
+      }
+    },
+    {
+      "id": "dm-seeding-influencer",
+      "template": "Tuliskan draf pesan DM Instagram penawaran gifting/seeding produk {{nama_produk}} dari {{nama_brand}} kepada kreator {{nama_kreator}}. Jelaskan alasan brand memilih kreator tersebut dan ajakan kolaborasi tanpa paksaan berlebihan.",
+      "variables": [
+        "nama_produk",
+        "nama_brand",
+        "nama_kreator"
+      ],
+      "example": {
+        "input": {
+          "nama_produk": "Vintage Washed Hoodie",
+          "nama_brand": "Kroma Goods",
+          "nama_kreator": "Rian Kusuma"
+        },
+        "output": "Halo Rian! Kami dari tim Kroma Goods menyukai kurasi gaya pakaian harian kamu yang konsisten dan rapi. Dalam rangka rilis seri Vintage Washed Hoodie pekan ini, kami ingin mengirimkan satu paket lengkap untuk kamu coba langsung sesuai ukuranmu. Tidak ada kewajiban unggah khusus, kami hanya ingin kamu merasakan kenyamanan materialnya. Jika berkenan, boleh kirimkan alamat dan ukuran favoritmu ya. Terima kasih banyak!"
+      }
+    },
+    {
+      "id": "caption-teaser-drop",
+      "template": "Tuliskan caption Instagram pengumuman rilis koleksi {{nama_koleksi}} dari {{nama_brand}}. Rilis dijadwalkan pada {{tanggal_rilis}} dengan jumlah terbatas sebanyak {{total_kuota}} pcs. Masukkan call-to-action untuk mengaktifkan notifikasi pengingat.",
+      "variables": [
+        "nama_koleksi",
+        "nama_brand",
+        "tanggal_rilis",
+        "total_kuota"
+      ],
+      "example": {
+        "input": {
+          "nama_koleksi": "Monochrome Chapter II",
+          "nama_brand": "Sora Project",
+          "tanggal_rilis": "25 Oktober 2026 pukul 19.00 WIB",
+          "total_kuota": "150"
+        },
+        "output": "Eksplorasi siluet minimalis kembali berlanjut. Monochrome Chapter II resmi kami lepas pada 25 Oktober 2026 pukul 19.00 WIB eksklusif di situs resmi kami. Batch kali ini hanya diproduksi sebanyak 150 pcs tanpa rencana restock ulang. Ketuk stiker pengingat di postingan ini agar tidak kehabisan ukuran pilihanmu."
+      }
+    },
+    {
+      "id": "cs-komplain-ukuran-salah",
+      "template": "Buat template pesan balasan Customer Service WhatsApp saat pembeli mengeluh ukuran baju {{nama_produk}} yang diterima kekecilan. Tunjukkan rasa empati, jelaskan syarat penukaran ukuran, dan berikan panduan langkah pengiriman balik.",
+      "variables": [
+        "nama_produk"
+      ],
+      "example": {
+        "input": {
+          "nama_produk": "Worker Overshirt"
+        },
+        "output": "Halo Kak, terima kasih sudah menghubungi kami. Mohon maaf sekali atas ketidaknyamanannya terkait ukuran Worker Overshirt yang kurang pas di badan Kakak. Kami menyediakan layanan tukar ukuran dalam 3 hari kerja sejak paket diterima dengan syarat label belum dilepas dan baju belum dicuci. Boleh informasikan ukuran pengganti yang diinginkan? Tim kami akan segera menyiapkan resi retur dan panduan pengiriman balik."
+      }
+    }
+  ]
+}

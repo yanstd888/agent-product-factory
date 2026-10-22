@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check "skills-ref @ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref" doodle-lint==1.2.0
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/create_examples.py && git diff --exit-code -- examples
+      - run: python -m product_qa check examples/prompt-pack --type prompt-pack --json-out "$RUNNER_TEMP/prompt-pack-report.json"
+      - run: for skill in skills/*; do skills-ref validate "$skill"; done
+      - run: doodle --no-color skills

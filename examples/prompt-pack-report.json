@@ -1,0 +1,43 @@
+{
+  "findings": [
+    {
+      "id": "product-path",
+      "message": "Product path is available.",
+      "severity": "blocker",
+      "status": "pass"
+    },
+    {
+      "id": "file-readable",
+      "message": "All product files can be opened.",
+      "severity": "blocker",
+      "status": "pass"
+    },
+    {
+      "id": "placeholder",
+      "message": "No text placeholders found.",
+      "severity": "blocker",
+      "status": "pass"
+    },
+    {
+      "id": "metadata",
+      "message": "Required metadata is present.",
+      "path": "product.json",
+      "severity": "warning",
+      "status": "pass"
+    },
+    {
+      "id": "prompt-pack",
+      "message": "Prompt pack structure is valid.",
+      "severity": "blocker",
+      "status": "pass"
+    }
+  ],
+  "product_path": "prompt-pack",
+  "product_type": "prompt-pack",
+  "schema_version": "1.0",
+  "summary": {
+    "blockers": 0,
+    "passed": 5,
+    "warnings": 0
+  }
+}
