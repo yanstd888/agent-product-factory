@@ -19,7 +19,9 @@ class DoctorTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary_directory:
             tools = Path(temporary_directory)
             name = "pandoc.exe" if os.name == "nt" else "pandoc"
-            (tools / name).write_text("", encoding="utf-8")
+            executable = tools / name
+            executable.write_text("", encoding="utf-8")
+            executable.chmod(0o755)
 
             found = check_tools(("pandoc",), search_path=str(tools))
             missing = check_tools(("pandoc",), search_path="")
